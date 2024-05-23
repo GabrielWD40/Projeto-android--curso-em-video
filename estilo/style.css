@@ -1,0 +1,229 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: Android;
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+/*Declaração das variáveis globais da nossa folha de estilo*/
+:root{
+    --cor1: #c5ebd6;
+    --cor2: #83e1ad;
+    --cor3: #3ddc84;
+    --cor4: #2fa866;
+    --cor5: #1a5c37;
+    --cor6: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive; 
+    --font-android: 'Android', cursive;
+}
+
+/**************************************************************************************************************************************************/
+                                                    /*reset dos padrões de estilização do navegador*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+}
+
+/**************************************************************************************************************************************************/
+                                                    /*ESTILIZAÇÃO DOS ELEMENTOS DO NOSSO HTML*/
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor4), var(--cor6));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > h1{
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+}
+
+header > p{
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 600px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    padding-bottom: 50px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+} 
+
+nav{
+    background-color: var(--cor6);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.365);
+     
+}
+
+nav > a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+
+}
+
+nav > a:hover{
+     background-color: var(--cor4);
+     color: var(--cor6);
+}
+
+body{
+    background-color: var(--cor1);
+    font-family: var(--fonte-padrao);    
+} 
+
+main{
+    max-width: 1000px;
+    min-width: 300px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.411);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main h1{
+    color: var(--cor6);
+    font-family: var(--font-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+main h2{
+    color: var(--cor5);
+    font-family: var(--font-android);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor2), transparent);
+    text-indent: 8px;
+}
+
+main p{
+    margin: 15px 0px;
+    font-size: 1em;
+    text-align: justify;
+    text-indent: 30px; /*Dá o espaçamento de parágrafo na primeira linha*/
+    line-height: 2em; /*Aumenta o espaçamento entre as linhas*/
+}
+
+main strong{
+    color: var(--cor5);
+    font-weight: bold;
+}
+
+a.externo::after{
+    content: '\00A0\1F517';
+}
+
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor6);
+    background-color: var(--cor2);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor5);
+}
+
+.bugdroid-pequeno{
+    display: block; /*transforma uma imagem em bloco, para assim podermos centraliza-lá!*/
+    margin: auto;
+    width: 350px;
+}
+
+main img{
+    width: 100%;
+}
+
+div.video{
+    background-color: var(--cor6);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 59%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute ;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+
+main aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.280);
+}
+
+aside > ul{
+    list-style-position: inside; /*Coloca as bolinhas da lista dentro do elemento*/
+    columns: 2; /*Divide a lista em duas colunas*/
+    list-style-type: '\2714\00A0\00A0';
+
+    /*
+    list-style-type: serve para você colocar um tipo de ícone personalizado no lugar da bolinha da lista.
+
+    Depois, coloque entre aspas simples '' o código do emoji que vc escolheu com uma \na frente. Exemplo: \2714
+
+    \00A0 é usado para dar um espaço sem quebra delinha
+    Isso não é compatível com todos os navegadores
+    */
+}
+
+aside > h3{
+    color: white;
+    background-color: var(--cor5);
+    padding: 10px;
+    margin: -10px -10px 0 -10px ;
+    /*
+        Se você quer crescer a borda, pode usar valores negativos, isso é bem útil e fez com que o nosso h33 ficasse colado com o aside.
+    */
+    border-radius: 10px 10px 0px 0px;
+}
+
+footer{
+    background-color: var(--cor6);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 8px;
+}
+
+footer a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor2);
+}
